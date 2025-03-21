@@ -8,7 +8,6 @@ async function getMembers() {
     let { data: members, error } = await supabase
   .from('members')
   .select('*')
-    console.log(members);
     let tableBody = document.getElementById('member-rows');
     for (let member of members) {
         tableBody.innerHTML += `<tr>
